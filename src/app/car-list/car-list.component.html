@@ -1,20 +1,7 @@
-<div class="div-table">
-    <div class="div-header">
-        <div class="div-cell">Brand</div>
-        <div class="div-cell">Model</div>
-        <div class="div-cell">Pret</div>
-        <div class="div-cell">Km</div>        
-    </div>
-    <div class="div-row" *ngFor="let vehicle of vehicles">
-        <div class="div-cell">{{vehicle.brand}}</div>       
-        <div class="div-cell">{{vehicle.model}}</div>
-        <div class="div-cell">{{vehicle.pret}}</div>
-        <div class="div-cell">{{vehicle.km}}</div>     
-    </div>
-    <div class="div-row">
-        <div class="div-cell">Audi</div>       
-        <div class="div-cell">QT</div>
-        <div class="div-cell">44</div>
-        <div class="div-cell">55</div>     
-    </div>
+<div class="row">
+    <div class="column" *ngFor='let vehicle of vehicles'>
+        <div class="card" routerLink="/{{vehicle.brand.trim()}}">
+            <img src='assets/{{vehicle.brand.trim()}}.png'>
+        </div>
+    </div>    
 </div>
