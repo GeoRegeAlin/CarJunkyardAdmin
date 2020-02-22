@@ -21,10 +21,9 @@ export class VehicleService{
     {
         return this.http.get<Car[]>(this.getUrl);
     }
-    async getSpecificVehicle(id:number)
+    getSpecificVehicles(brand:string):Observable<Car[]>
     {
-        const response=this.http.get<Car>(this.getUrl+'/'+id).toPromise();
-        return response;        
+        return this.http.get<Car[]>(this.getUrl+'/'+brand);     
     }
     addVehicle(car:Car):Observable<Car>{
         return this.http.post<Car>(this.addUrl,car,this.httpOptions);

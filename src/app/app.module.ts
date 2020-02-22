@@ -4,12 +4,14 @@ import {HttpClientModule} from "@angular/common/http"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarListComponent } from './car-list/car-list.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { BrandSpecificComponent } from './brand-specific/brand-specific.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarListComponent
+    CarListComponent,
+    BrandSpecificComponent
   ],
   imports: [
     BrowserModule,
