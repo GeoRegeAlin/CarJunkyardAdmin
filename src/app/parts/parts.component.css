@@ -1,0 +1,17 @@
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    height:100%;
+    background-color: black;
+}
+.column{
+    width:33.33%;
+}
+.card{
+    background-color: white;
+    margin-bottom: 40px;
+    margin-left:50px;
+    width:80%;
+    height: 30%;
+    text-align: center;
+  }

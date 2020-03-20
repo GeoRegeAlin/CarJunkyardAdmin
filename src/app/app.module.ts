@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CarListComponent } from './car-list/car-list.component';
 import { RouterModule } from '@angular/router';
 import { BrandSpecificComponent } from './brand-specific/brand-specific.component';
+import { PartsComponent } from './parts/parts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarListComponent,
-    BrandSpecificComponent
+    BrandSpecificComponent,
+    PartsComponent
   ],
   imports: [
     BrowserModule,

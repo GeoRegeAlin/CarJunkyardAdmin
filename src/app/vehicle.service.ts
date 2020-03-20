@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Car } from './Car';
 import {HttpClient, HttpHeaders} from "@angular/common/http"
 import { Observable } from 'rxjs';
+import { Engine } from './Engine';
 
 @Injectable({
     providedIn:'root'
@@ -31,5 +32,9 @@ export class VehicleService{
     deleteCar(id:number):Observable<any>
     {
         return this.http.delete<Car>(this.getUrl+'/'+id);
+    }
+    getEngine(id:number):Observable<Engine>
+    {
+        return this.http.get<Engine>(this.getUrl+'/'+id+'/engine')
     }
 }

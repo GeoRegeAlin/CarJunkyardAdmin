@@ -1,7 +1,7 @@
 <div class="row">
     <div class="column" *ngFor='let vehicle of vehicles'>
-        <div class="card">
-            <p>{{vehicle.pret}}</p>
+        <div class="card" routerLink='/{{vehicle.brand.trim()}}/{{vehicle.id}}'>
+            <p>{{vehicle.model}}</p>
         </div>
     </div>
     </div>
