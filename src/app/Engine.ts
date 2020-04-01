@@ -1,7 +1,7 @@
 export interface Engine{
     id:number;
     price:number;
-    capacity:number;
-    cylinders:number;
+    Capacity:number;
+    Cylinders:number;
     carId:number;
 }
