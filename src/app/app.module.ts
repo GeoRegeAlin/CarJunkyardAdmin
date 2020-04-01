@@ -7,21 +7,31 @@ import { CarListComponent } from './car-list/car-list.component';
 import { RouterModule } from '@angular/router';
 import { BrandSpecificComponent } from './brand-specific/brand-specific.component';
 import { PartsComponent } from './parts/parts.component';
+import {MatDialogModule, MatInputModule} from '@angular/material';
+import { AddEngineComponent } from './add-engine/add-engine.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
     AppComponent,
     CarListComponent,
     BrandSpecificComponent,
-    PartsComponent
+    PartsComponent,
+    AddEngineComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddEngineComponent]
 })
 export class AppModule { }

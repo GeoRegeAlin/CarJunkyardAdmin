@@ -37,4 +37,7 @@ export class VehicleService{
     {
         return this.http.get<Engine>(this.getUrl+'/'+id+'/engine')
     }
+    addEngine(engine:Engine):Observable<Engine>{
+        return this.http.post<Engine>(this.getUrl+'/engine',engine,this.httpOptions)
+    }
 }
